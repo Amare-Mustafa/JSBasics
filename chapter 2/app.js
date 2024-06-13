@@ -56,7 +56,7 @@ const logPerson = (person,index) =>{
     console.log(`${index} - ${person}`);
 }
 
-people.forEach(logPerson);*/
+people.forEach(logPerson);
 //------------------------------------------------------------
 const ul = document.querySelector('.people');
 const HumanNames = ["Peter", "Quinn", "Riley", "Samuel", "Tara", "Uma", "Victor", "Wendy", "Xavier", "Yvonne"];
@@ -71,3 +71,39 @@ HumanNames.forEach(human => {
 
 ul.innerHTML = html;
 //done
+*/
+
+//---------------------------------------------------------------------------------------
+//objects : have properties(variables ) and things it can do (methods)
+
+//object literals
+
+let user = {
+    name: 'Amy',
+    age : 24,
+    hight: 5.6,
+    email:"amar@gmail.com",
+    blogs : ['why injera is nice',' how to make injera', 'how to eat injera'],
+    greetings : () => console.log('helloworld'),
+
+    login : () => console.log('User logged in'),
+    logout: () => console.log('User logged out'),
+    logBlogs : function () {
+        this.blogs.forEach((blog) =>{
+            console.log(blog);
+        })
+    },
+
+}
+
+console.log(user.age, user.name, user.hight);
+user.greetings();
+console.log(user['age']);
+console.log(user['hight']);
+
+user['name'] = 'amir';
+const emailname = 'email';
+console.log(user[emailname]);
+user.login();
+user.logout();
+user.logBlogs();
